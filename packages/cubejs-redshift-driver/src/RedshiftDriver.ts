@@ -24,6 +24,7 @@ export class RedshiftDriver extends PostgresDriver<RedshiftDriverConfiguration> 
 
   protected getInitialConfiguration(): Partial<RedshiftDriverConfiguration> {
     return {
+      readOnly: true,
       exportBucket: this.getExportBucket(),
     };
   }
